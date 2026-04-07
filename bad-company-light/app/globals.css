@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Custom CSS variables for Bad Company light theme */
+:root {
+  --background: #FAFAF9; /* stone-50 */
+  --foreground: #0F172A; /* slate-900 */
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  --primary: #F59E0B; /* amber-500 */
+  --primary-foreground: #0F172A;
+  --secondary: #F1F5F9; /* slate-100 */
+  --secondary-foreground: #0F172A;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B; /* slate-500 */
+  --accent: #0EA5E9; /* sky-500 */
+  --accent-foreground: #0F172A;
+  --destructive: #EF4444;
+  --destructive-foreground: #FAFAF9;
+  --border: #E2E8F0; /* slate-200 */
+  --input: #E2E8F0;
+  --ring: #F59E0B;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #FAFAF9;
+    --card: #171717;
+    --card-foreground: #FAFAF9;
+    --popover: #171717;
+    --popover-foreground: #FAFAF9;
+    --primary: #F59E0B;
+    --primary-foreground: #0A0A0A;
+    --secondary: #262626;
+    --secondary-foreground: #FAFAF9;
+    --muted: #262626;
+    --muted-foreground: #A1A1AA;
+    --accent: #38BDF8;
+    --accent-foreground: #0A0A0A;
+    --destructive: #7F1D1D;
+    --destructive-foreground: #FAFAF9;
+    --border: #404040;
+    --input: #404040;
+    --ring: #F59E0B;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Custom utilities */
+@utility container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@utility section-padding {
+  padding-block: 6rem;
+}
